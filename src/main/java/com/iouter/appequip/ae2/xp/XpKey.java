@@ -3,7 +3,6 @@ package com.iouter.appequip.ae2.xp;
 import appeng.api.stacks.AEKey;
 import appeng.api.stacks.AEKeyType;
 import com.iouter.appequip.AppliedEquipment;
-import com.iouter.appequip.ae2.equipment.EquipmentKey;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
@@ -20,7 +19,8 @@ public class XpKey extends AEKey {
     protected static String SHORT_ID = "xp";
     protected static final ResourceLocation ID = AppliedEquipment.id(SHORT_ID);
 
-    private XpKey() {}
+    private XpKey() {
+    }
 
     @Override
     public AEKeyType getType() {

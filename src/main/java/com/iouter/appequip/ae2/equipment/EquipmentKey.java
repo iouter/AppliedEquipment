@@ -19,7 +19,8 @@ public class EquipmentKey extends AEKey {
     protected static String SHORT_ID = "equipment";
     protected static final ResourceLocation ID = AppliedEquipment.id(SHORT_ID);
 
-    private EquipmentKey() {}
+    private EquipmentKey() {
+    }
 
     @Override
     public AEKeyType getType() {

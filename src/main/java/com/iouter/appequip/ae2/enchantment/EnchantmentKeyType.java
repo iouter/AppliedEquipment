@@ -11,8 +11,8 @@ import org.jetbrains.annotations.Nullable;
 public class EnchantmentKeyType extends AEKeyType {
 
     public static final AEKeyType INSTANCE = new EnchantmentKeyType();
-    private static final MapCodec<? extends AEKey> CODEC = MapCodec.unit(EnchantmentKey.INSTANCE);
     public static final MutableComponent COMPONENT = AppliedEquipment.component(EnchantmentKey.SHORT_ID);
+    private static final MapCodec<? extends AEKey> CODEC = MapCodec.unit(EnchantmentKey.INSTANCE);
 
     private EnchantmentKeyType() {
         super(EnchantmentKey.ID, EnchantmentKey.class, COMPONENT);

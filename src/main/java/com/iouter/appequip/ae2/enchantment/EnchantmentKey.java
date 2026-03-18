@@ -19,7 +19,8 @@ public class EnchantmentKey extends AEKey {
     protected static String SHORT_ID = "enchantment";
     protected static final ResourceLocation ID = AppliedEquipment.id(SHORT_ID);
 
-    private EnchantmentKey() {}
+    private EnchantmentKey() {
+    }
 
     @Override
     public AEKeyType getType() {
