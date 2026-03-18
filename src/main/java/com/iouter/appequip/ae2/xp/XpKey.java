@@ -1,0 +1,69 @@
+package com.iouter.appequip.ae2.xp;
+
+import appeng.api.stacks.AEKey;
+import appeng.api.stacks.AEKeyType;
+import com.iouter.appequip.AppliedEquipment;
+import com.iouter.appequip.ae2.equipment.EquipmentKey;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+
+import java.util.List;
+
+public class XpKey extends AEKey {
+    public static AEKey INSTANCE = new XpKey();
+    protected static String SHORT_ID = "xp";
+    protected static final ResourceLocation ID = AppliedEquipment.id(SHORT_ID);
+
+    private XpKey() {}
+
+    @Override
+    public AEKeyType getType() {
+        return XpKeyType.INSTANCE;
+    }
+
+    @Override
+    public AEKey dropSecondary() {
+        return this;
+    }
+
+    @Override
+    public CompoundTag toTag(HolderLookup.Provider registries) {
+        return new CompoundTag();
+    }
+
+    @Override
+    public Object getPrimaryKey() {
+        return this;
+    }
+
+    @Override
+    public ResourceLocation getId() {
+        return ID;
+    }
+
+    @Override
+    public void writeToPacket(RegistryFriendlyByteBuf data) {
+
+    }
+
+    @Override
+    protected Component computeDisplayName() {
+        return XpKeyType.COMPONENT;
+    }
+
+    @Override
+    public void addDrops(long amount, List<ItemStack> drops, Level level, BlockPos pos) {
+
+    }
+
+    @Override
+    public boolean hasComponents() {
+        return false;
+    }
+}
